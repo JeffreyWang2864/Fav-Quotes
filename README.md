@@ -5,8 +5,8 @@ Fav Quotes allow you to collect your favorite quotes at your fingertips. You may
 
 ## Screenshots
 
-![s1](https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s1.png=400x866)
+<img src="https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s1.png" width="400" height="866" />
 
-![s2](https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s2.png=400x866)
+<img src="https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s2.png" width="400" height="866" />
 
-![s3](https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s3.png=400x866)
+<img src="https://github.com/JeffreyWang2864/Fav-Quotes/blob/main/screenshots/s3.png" width="400" height="866" />
