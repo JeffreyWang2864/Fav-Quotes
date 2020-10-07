@@ -22,6 +22,10 @@
 		23968BE0252AE817001E10B1 /* QuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23968BDE252AE817001E10B1 /* QuoteTableViewCell.xib */; };
 		23968BE3252AE85E001E10B1 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23968BE2252AE85E001E10B1 /* Quote.swift */; };
 		23968BE6252AE9E8001E10B1 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23968BE5252AE9E8001E10B1 /* AppDataManager.swift */; };
+		23B4D89F252D30EA004F20C2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B4D89B252D30E9004F20C2 /* AppState.swift */; };
+		23B4D8A0252D30EA004F20C2 /* QuoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B4D89C252D30E9004F20C2 /* QuoteList.swift */; };
+		23B4D8A1252D30EA004F20C2 /* QuoteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B4D89D252D30E9004F20C2 /* QuoteArray.swift */; };
+		23B4D8A2252D30EA004F20C2 /* QuoteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B4D89E252D30EA004F20C2 /* QuoteEditor.swift */; };
 		23E413F7252ADDD00091C2AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E413F6252ADDD00091C2AD /* AppDelegate.swift */; };
 		23E413F9252ADDD00091C2AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E413F8252ADDD00091C2AD /* SceneDelegate.swift */; };
 		23E413FC252ADDD00091C2AD /* FavQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23E413FA252ADDD00091C2AD /* FavQuotes.xcdatamodeld */; };
@@ -47,6 +51,10 @@
 		23968BDE252AE817001E10B1 /* QuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteTableViewCell.xib; sourceTree = "<group>"; };
 		23968BE2252AE85E001E10B1 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		23968BE5252AE9E8001E10B1 /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
+		23B4D89B252D30E9004F20C2 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		23B4D89C252D30E9004F20C2 /* QuoteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteList.swift; sourceTree = "<group>"; };
+		23B4D89D252D30E9004F20C2 /* QuoteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteArray.swift; sourceTree = "<group>"; };
+		23B4D89E252D30EA004F20C2 /* QuoteEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteEditor.swift; sourceTree = "<group>"; };
 		23E413F3252ADDD00091C2AD /* Fav Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fav Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E413F6252ADDD00091C2AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E413F8252ADDD00091C2AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,33 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		23B4D89A252D30B6004F20C2 /* SwiftUIView */ = {
+			isa = PBXGroup;
+			children = (
+				23B4D89B252D30E9004F20C2 /* AppState.swift */,
+				23B4D89E252D30EA004F20C2 /* QuoteEditor.swift */,
+				23B4D89C252D30E9004F20C2 /* QuoteList.swift */,
+			);
+			path = SwiftUIView;
+			sourceTree = "<group>";
+		};
+		23B4D8A6252E2634004F20C2 /* SwiftUIModel */ = {
+			isa = PBXGroup;
+			children = (
+				23B4D89D252D30E9004F20C2 /* QuoteArray.swift */,
+			);
+			path = SwiftUIModel;
+			sourceTree = "<group>";
+		};
+		23B4D8A7252E263D004F20C2 /* SwiftUIModule */ = {
+			isa = PBXGroup;
+			children = (
+				23B4D89A252D30B6004F20C2 /* SwiftUIView */,
+				23B4D8A6252E2634004F20C2 /* SwiftUIModel */,
+			);
+			path = SwiftUIModule;
+			sourceTree = "<group>";
+		};
 		23E413EA252ADDD00091C2AD = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +189,7 @@
 		23E413F5252ADDD00091C2AD /* FavQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				23B4D8A7252E263D004F20C2 /* SwiftUIModule */,
 				2352FA20252BE9F900C552E9 /* Entity */,
 				23968BE4252AE9DB001E10B1 /* Manager */,
 				23968BD8252AE120001E10B1 /* FQ */,
@@ -261,15 +297,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E4140F252ADDEE0091C2AD /* BaseViewController.swift in Sources */,
+				23B4D8A2252D30EA004F20C2 /* QuoteEditor.swift in Sources */,
 				236AB227252B0B7500075A94 /* UIView+Ext.swift in Sources */,
 				236AB22E252B201C00075A94 /* NewQuoteViewController.swift in Sources */,
+				23B4D89F252D30EA004F20C2 /* AppState.swift in Sources */,
 				2352FA1F252BE90E00C552E9 /* CoreDataManager.swift in Sources */,
 				2352FA2C252BEB5D00C552E9 /* QuoteEntity+CoreDataProperties.swift in Sources */,
 				236AB223252B095900075A94 /* Util.swift in Sources */,
 				23E413F7252ADDD00091C2AD /* AppDelegate.swift in Sources */,
 				23968BDF252AE817001E10B1 /* QuoteTableViewCell.swift in Sources */,
+				23B4D8A0252D30EA004F20C2 /* QuoteList.swift in Sources */,
 				236AB229252B102100075A94 /* FQView.swift in Sources */,
 				23E413F9252ADDD00091C2AD /* SceneDelegate.swift in Sources */,
+				23B4D8A1252D30EA004F20C2 /* QuoteArray.swift in Sources */,
 				2352FA2B252BEB5D00C552E9 /* QuoteEntity+CoreDataClass.swift in Sources */,
 				236AB22B252B179300075A94 /* FQPhoneType.swift in Sources */,
 				23E413FC252ADDD00091C2AD /* FavQuotes.xcdatamodeld in Sources */,
