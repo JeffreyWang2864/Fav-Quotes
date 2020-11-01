@@ -22,13 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         2. Sync with CoreData immediately after the user exiting QuoteEditor. In NewQuoteViewController, I can easily do it with a callback. In SwiftUI though, the callback is automatically managed, so I have to passively sync when the app enters background. Still looking for solutions on StackOverflow...
         3. Deleting the Quote when user edit the current Quote to empty. Same thing with #2, I can't detect if the user emptied both TextView after exiting QuoteEditor.
      */
-    
-    var body: some Scene {
-        WindowGroup{
-            QuoteList()
-        }
-    }
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         

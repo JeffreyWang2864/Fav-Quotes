@@ -9,10 +9,13 @@
 import Foundation
 
 enum FQPhoneType{
-    case iphonese
+    case ipodtouch
     case iphone8
     case iphone8plus
     case iphone11
     case iphone11pro
     case iphone11promax
+    case iphone12
+    case iphone12pro
+    case iphone12promax
 }

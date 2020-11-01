@@ -13,11 +13,12 @@ let screenHeight = UIScreen.main.bounds.height
 
 let PHONE_TYPE: FQPhoneType = {
     assert(UIDevice().userInterfaceIdiom == .phone)
+    NSLog("\(UIScreen.main.nativeBounds.height)")
     switch UIScreen.main.nativeBounds.height {
-    case 1136:
-        return .iphonese
     case 1334:
         return .iphone8
+    case 1136:
+        return .ipodtouch
     case 1920, 2208:
         return .iphone8plus
     case 1792:
@@ -26,7 +27,12 @@ let PHONE_TYPE: FQPhoneType = {
         return .iphone11pro
     case 2688:
         return .iphone11promax
+    case 2532:
+        return .iphone12
+    case 2778:
+        return .iphone12promax
     default:
-        fatalError()
+        return .iphone12
     }
 }()
+

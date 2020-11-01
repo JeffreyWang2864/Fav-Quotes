@@ -36,7 +36,8 @@ class BaseViewController: UIViewController {
         self.newQuoteButton.tintColor = FQColor.themeColor
         
         //fill up bottom safe area
-        if(PHONE_TYPE == .iphone11 || PHONE_TYPE == .iphone11pro || PHONE_TYPE == .iphone11promax){
+        if(PHONE_TYPE == .iphone11 || PHONE_TYPE == .iphone11pro || PHONE_TYPE == .iphone11promax ||
+           PHONE_TYPE == .iphone12 || PHONE_TYPE == .iphone12pro || PHONE_TYPE == .iphone12promax){
             let fillupView = UIView(frame: CGRect(x: 0, y: screenHeight - 34, width: screenWidth, height: 34))
             fillupView.backgroundColor = FQColor.dayForegroundColor
             self.view.addSubview(fillupView)
